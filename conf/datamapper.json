@@ -1,0 +1,22 @@
+{
+  "vertexMap" : {
+    "actor.csv" : {
+      "[VertexLabel]" : "User",
+      "ssn" : "ssn",
+      "gender" : "gender",
+      "label" : "label"
+    }
+  },
+  "edgeMap" : {
+    "relationship.csv" : {
+      "[edge_left]" : {
+        "Left" : "User.ssn"
+      },
+      "[EdgeLabel]" : "LIKES",
+      "[edge_right]" : {
+        "Right" : "User.ssn"
+      }
+    }
+  }
+}
+
