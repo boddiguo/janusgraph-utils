@@ -15,6 +15,7 @@
  *******************************************************************************/
 package com.ibm.janusgraph.utils.schema
 
+import com.ibm.janusgraph.utils.importer.vertex.VertexLoaderWorker
 import org.apache.tinkerpop.gremlin.process.traversal.Order
 import org.apache.tinkerpop.gremlin.structure.Direction
 import org.apache.tinkerpop.gremlin.structure.Edge
@@ -37,6 +38,8 @@ import org.janusgraph.core.schema.SchemaAction
 import org.janusgraph.core.schema.VertexLabelMaker
 import org.janusgraph.core.schema.JanusGraphManagement.IndexBuilder
 import org.janusgraph.graphdb.database.StandardJanusGraph
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 /**
  * Janusgraph datatype mapping table
@@ -173,6 +176,7 @@ class IndexBean {
     boolean unique = false
     String indexOnly = null
     String mixedIndex = null
+    private static final Logger log = LoggerFactory.getLogger(IndexBean.class);
 
     /**
      * Create vertex/edge index based on the {@code node}. If {@code isVertexIndex} equals true
@@ -197,7 +201,7 @@ class IndexBean {
             return
         }
 
-        println("start build for " + name)
+        log.info("start build for " + name)
 
         IndexBuilder ib = mgmt.buildIndex(name, isVertexIndex ? Vertex.class : Edge.class)
         for (property in propertyKeys) {
