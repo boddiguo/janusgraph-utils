@@ -197,6 +197,8 @@ class IndexBean {
             return
         }
 
+        println("start build for " + name)
+
         IndexBuilder ib = mgmt.buildIndex(name, isVertexIndex ? Vertex.class : Edge.class)
         for (property in propertyKeys) {
             ib.addKey(mgmt.getPropertyKey(property))
