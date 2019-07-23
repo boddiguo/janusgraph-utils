@@ -31,11 +31,13 @@
       "unidirected": false
     }
   ],
-  "vertexIndexes" : [ {
+  "vertexIndexes" : [
+    {
     "name" : "ssn_comp",
     "propertyKeys" : [ "ssn" ],
     "composite" : true,
     "unique" : true
-  }],
+    }
+  ],
   "vertexCentricIndexes" : [ ]
 }
