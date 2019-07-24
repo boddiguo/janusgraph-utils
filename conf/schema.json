@@ -34,5 +34,13 @@
     "unique" : true
     }
   ],
+  "edgeIndexes" : [
+    {
+      "name" : "Left_comp",
+      "propertyKeys" : [ "Left" ],
+      "composite" : true,
+      "unique" : true
+    }
+  ],
   "vertexCentricIndexes" : [ ]
 }

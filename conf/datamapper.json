@@ -3,8 +3,7 @@
     "actor.csv" : {
       "[VertexLabel]" : "User",
       "ssn" : "ssn",
-      "gender" : "gender",
-      "label" : "label"
+      "gender" : "gender"
     }
   },
   "edgeMap" : {

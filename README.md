@@ -107,7 +107,8 @@ doc [doc/users_guide.md](doc/users_guide.md) for details. Alternatively, just ru
 load schema and import data.
 ```
 export JANUSGRAPH_HOME=/root/software/janusgraph-0.4.0-hadoop2
-./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data /mnt/data/schema.json /mnt/data/datamapper.json
+./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data ./conf/schema.json ./conf/datamapper.json
+./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data3 ./conf/schema.json ./conf/datamapper.json
 ```
 
 ### 5. Run interactive remote queries
