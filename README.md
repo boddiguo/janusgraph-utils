@@ -108,6 +108,7 @@ load schema and import data.
 ```
 export JANUSGRAPH_HOME=/root/software/janusgraph-0.4.0-hadoop2
 ./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data ./conf/schema.json ./conf/datamapper.json
+./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data1 ./conf/schema.json ./conf/datamapper.json
 ./run.sh import /root/software/janusgraph-0.4.0-hadoop2/conf/janusgraph-cql-es.properties /mnt/data3 ./conf/schema.json ./conf/datamapper.json
 ```
 
