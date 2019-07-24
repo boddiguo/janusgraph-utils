@@ -44,6 +44,8 @@ else
     echo "JanusGraph lib path is set to $JANUSGRAPH_HOME/lib"
 fi
 
+export JANUSGRAPH_HOME=/root/software/janusgraph-0.4.0-hadoop2
+
 CP="${sDir}/lib/commons-csv-1.4.jar:${sDir}/conf:${JANUSGRAPH_HOME}/lib/*"
 class=$1
 case $class in
@@ -58,6 +60,14 @@ case $class in
     loadsch)
         shift
         java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.importer.schema.SchemaLoader "$@"
+        ;;
+    benchmark)
+        shift
+        java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.Benchmark "$@"
+        ;;
+    BenchmarkForQuery)
+        shift
+        java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.BenchmarkForQuery "$@"
         ;;
     *)
         usage      # unknown option
